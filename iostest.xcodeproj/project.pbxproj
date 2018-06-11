@@ -10,6 +10,7 @@
 		14E0E921E34D44300DBB7537 /* Pods_iostest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 034756EB3C8090D57ACD73A8 /* Pods_iostest.framework */; };
 		345CDB68BD5CC285494678E9 /* Pods_iostestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EB1A67970F946FF5EEFB2B /* Pods_iostestTests.framework */; };
 		3AFBE4D04AB10BF8C7A5D5EF /* Pods_iostestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F50872CBACC824AEE4BAFCD /* Pods_iostestUITests.framework */; };
+		AA6234DD208F1AC700ED6AF6 /* IndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6234DC208F1AC700ED6AF6 /* IndexTableViewController.swift */; };
 		AAE9B837208D7E5E0083C862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9B836208D7E5E0083C862 /* AppDelegate.swift */; };
 		AAE9B839208D7E5E0083C862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9B838208D7E5E0083C862 /* ViewController.swift */; };
 		AAE9B83C208D7E5E0083C862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE9B83A208D7E5E0083C862 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		2180C780B8B074915D600FC3 /* Pods-iostestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iostestTests/Pods-iostestTests.release.xcconfig"; sourceTree = "<group>"; };
 		A6C2DA55DDE9CC0CA4A426B7 /* Pods-iostestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iostestUITests/Pods-iostestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E653C845050A724C22581D /* Pods-iostest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iostest/Pods-iostest.release.xcconfig"; sourceTree = "<group>"; };
+		AA6234DC208F1AC700ED6AF6 /* IndexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexTableViewController.swift; sourceTree = "<group>"; };
 		AAE9B833208D7E5E0083C862 /* iostest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iostest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE9B836208D7E5E0083C862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAE9B838208D7E5E0083C862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA6234DB208F1A9B00ED6AF6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AA6234DC208F1AC700ED6AF6 /* IndexTableViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		AAE9B82A208D7E5E0083C862 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		AAE9B835208D7E5E0083C862 /* iostest */ = {
 			isa = PBXGroup;
 			children = (
+				AA6234DB208F1A9B00ED6AF6 /* controller */,
 				AAE9B836208D7E5E0083C862 /* AppDelegate.swift */,
 				AAE9B838208D7E5E0083C862 /* ViewController.swift */,
 				AAE9B83A208D7E5E0083C862 /* Main.storyboard */,
@@ -459,6 +470,7 @@
 			files = (
 				AAE9B839208D7E5E0083C862 /* ViewController.swift in Sources */,
 				AAE9B837208D7E5E0083C862 /* AppDelegate.swift in Sources */,
+				AA6234DD208F1AC700ED6AF6 /* IndexTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +646,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iostest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = flyketch.iostest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -649,7 +664,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iostest/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = flyketch.iostest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -665,7 +683,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iostestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = flyketch.iostestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -682,7 +704,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iostestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = flyketch.iostestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -698,7 +724,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iostestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = flyketch.iostestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -714,7 +744,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iostestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = flyketch.iostestUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
